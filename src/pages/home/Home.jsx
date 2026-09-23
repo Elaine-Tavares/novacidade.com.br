@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ImagemPrincipal from '../../assets/imagem_principal.webp';
+import ImagemPrincipal from '../../assets/hero.webp';
 import Banda from '../../assets/banda_de_musica_nova_cidade.webp'
 import styles from "./Home.module.css";
 
@@ -88,14 +88,15 @@ function Home() {
             </p>
 
             <div className={styles.heroButtons}>
-              <Link to="/projetos" className={styles.primaryButton}>
+              <Link to="/quemsomos" className={styles.primaryButton}>
                 Conheça nosso trabalho
                 <FaArrowRight />
               </Link>
 
               <Link to="/doe" className={styles.secondaryButton}>
-                Quero ajudar
-              </Link>
+                <FaHeart />
+                Doe   
+              </Link> 
             </div>
           </div>
 
@@ -104,6 +105,11 @@ function Home() {
               src={ImagemPrincipal}
               alt="Imagem Principal"
             />
+            <div className={styles.contatos_img}>
+              <strong>Contatos: </strong>
+              <span>(21) 98807 4852</span> <br/><br/>
+              <a href="#" className={styles.whats}><FaWhatsapp className={styles.whats_img}/>(21) 98477 2396</a>
+            </div>
           </div>
         </div>
       </section>
@@ -284,7 +290,7 @@ function Home() {
           </div>
 
           <Link
-            to="/seja-voluntario"
+            to="/sejavoluntario"
             className={styles.lightButton}
           >
             Quero ser voluntário

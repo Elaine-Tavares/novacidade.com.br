@@ -5,6 +5,7 @@
 .page {
   width: 100%;
   overflow: hidden;
+  padding-top: 80px;
 }
 
 .container {
@@ -18,7 +19,7 @@
 
 .hero {
   padding: 60px 0;
-  background-color: var(--primary_color);
+  background: #f8f6f1;
   border-bottom: 3px solid var(--secondary_color);
 }
 

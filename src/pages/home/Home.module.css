@@ -2,6 +2,7 @@
   width: 100%;
   overflow: hidden;
   border-bottom: 3px solid var(--secondary_color);
+  padding-top: 80px;
 }
 
 .container {
@@ -96,20 +97,31 @@
 .primaryButton {
   background: #222;
   color: #fff;
+  opacity: .9;
+  border: 3px solid transparent;
+}
+
+.primaryButton:hover {
+  opacity: 1;
 }
 
 .secondaryButton {
-  border: 2px solid #222;
-  color: #222;
+  background-color: var(--secondary_color);
+  color: var(--terciary_color);
+  opacity: .9;
+  border: 3px solid transparent;
 }
 
-.primaryButton:hover,
-.secondaryButton:hover,
-.lightButton:hover,
-.whatsappButton:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+.secondaryButton:hover{
+  opacity: 1;
+  border: 3px solid var(--primary_color);
 }
+
+
+/* .lightButton:hover,
+.whatsappButton:hover, */
+
+
 
 /* .heroImage {
   width: 100%;
@@ -131,6 +143,83 @@
   display: block;
   object-fit: cover;
   border-radius: 18px;
+}
+
+.contatos_img{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-top: 15px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+}
+
+.contatos_img strong{
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.contatos_img span{
+  font-weight: bold;
+}
+
+
+.whats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: fit-content;
+  padding: 10px 16px;
+
+  background-color: #25d366;
+  color: var(--terciary_color);
+
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+
+  animation: whatsappFloat 2.5s ease-in-out infinite;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.whats_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+
+}
+
+/* Animação lenta para cima e para baixo */
+@keyframes whatsappFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Ao passar o mouse */
+.whats:hover {
+  animation-play-state: paused;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
 }
 
 
@@ -465,9 +554,9 @@
     flex-direction: row;
   }
 
-  .heroImage img {
+  /* .heroImage img {
     height: 580px;
-  }
+  } */
 
   /* IMPACTO */
 
@@ -540,10 +629,6 @@
 
   .heroContent p {
     font-size: 1.1rem;
-  }
-
-  .heroImage img {
-    height: 450px !important;;
   }
 
   .aboutImage img {
@@ -669,10 +754,6 @@
 @media (min-width: 1200px) {
   .heroContent h1 {
     font-size: 4.5rem;
-  }
-
-   .heroImage img {
-    height: 555px !important;;
   }
 
   .aboutImage img {

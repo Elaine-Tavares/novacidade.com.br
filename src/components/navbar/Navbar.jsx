@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes, FaHeart } from "react-icons/fa";
-import Logo from '../../assets/logo_provisorio.webp'
+import Logo from '../../assets/logo.webp'
 
 import styles from "./Navbar.module.css";
 
@@ -17,7 +17,7 @@ function Navbar() {
       <div className={styles.container}>
         {/* LOGO */}
         <NavLink to="/" className={styles.logo} onClick={fecharMenu}>
-          <img className={styles.logo_provisorio} src={Logo} alt="Logo" />
+          <img className={styles.logo_img} src={Logo} alt="Logo" />
         </NavLink>
 
         {/* BOTÃO MENU MOBILE */}
@@ -65,6 +65,26 @@ function Navbar() {
             }
           >
             Cursos
+          </NavLink>
+
+          <NavLink
+            to="/distribuicaodequentinhas"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Distribuição de Quentinhas
+          </NavLink>
+
+          <NavLink
+            to="/distribuicaodecestasbasicas"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Distribuição de Cestas Básicas
           </NavLink>
 
           <NavLink
