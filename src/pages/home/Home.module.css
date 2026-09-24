@@ -203,7 +203,7 @@
 
 /* Animação lenta para cima e para baixo */
 @keyframes whatsappFloat {
-  0%,
+  0%,whatsappButton
   100% {
     transform: translateY(0);
   }
@@ -530,8 +530,18 @@
 }
 
 .whatsappButton {
-  border: 2px solid #222;
-  color: #222;
+  background-color: #25d366;
+  color: var(--terciary_color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+
+  animation: whatsappFloat 2.5s ease-in-out infinite;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 

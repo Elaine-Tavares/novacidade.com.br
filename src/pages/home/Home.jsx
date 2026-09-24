@@ -108,7 +108,13 @@ function Home() {
             <div className={styles.contatos_img}>
               <strong>Contatos: </strong>
               <span>(21) 98807 4852</span> <br/><br/>
-              <a href="#" className={styles.whats}><FaWhatsapp className={styles.whats_img}/>(21) 98477 2396</a>
+              <a 
+                className={styles.whats}
+                href="https://wa.me/5521984772693?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+                target="_blank"
+                rel="noopener noreferrer">
+                <FaWhatsapp className={styles.whats_img}/>(21) 98477 2396
+              </a>
             </div>
           </div>
         </div>
@@ -332,16 +338,15 @@ function Home() {
           </p>
 
           <div className={styles.donationButtons}>
-            <Link to="/doe" className={styles.primaryButton}>
-              Quero doar
-              <FaHeart />
+            <Link to="/doe" className={styles.secondaryButton}>
+             <FaHeart />
+              Quero doar  
             </Link>
-
             <a
-              href="https://wa.me/5500000000000"
-              target="_blank"
-              rel="noopener noreferrer"
               className={styles.whatsappButton}
+              href="https://wa.me/5521984772693?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."
+              target="_blank"
+              rel="noopener noreferrer" 
             >
               <FaWhatsapp />
               Fale conosco
