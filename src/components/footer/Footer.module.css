@@ -21,7 +21,7 @@ footer .social {
   margin-bottom: 25px;
 }
 
-.instagram {
+.instagram, .facebook {
   display: inline-flex;
   align-items: center;
   gap: 8px;

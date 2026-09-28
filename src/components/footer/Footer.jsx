@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
 
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/novacidade2021/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.instagram}
@@ -29,10 +29,10 @@ export default function Footer() {
           </a>
           <br/>
           <a
-            href="https://instagram.com/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.instagram}
+            className={styles.facebook}
           >
             <FaFacebook />
             Facebook

@@ -93,7 +93,7 @@ function Home() {
                 <FaArrowRight />
               </Link>
 
-              <Link to="/doe" className={styles.secondaryButton}>
+              <Link to="/doacoes" className={styles.secondaryButton}>
                 <FaHeart />
                 Doe   
               </Link> 
@@ -338,7 +338,7 @@ function Home() {
           </p>
 
           <div className={styles.donationButtons}>
-            <Link to="/doe" className={styles.secondaryButton}>
+            <Link to="/doacoes" className={styles.secondaryButton}>
              <FaHeart />
               Quero doar  
             </Link>

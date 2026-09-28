@@ -9,6 +9,7 @@ import SejaParceiro from "./pages/sejaparceiro/SejaParceiro"
 import DistribuicaoDeQuentinhas from "./pages/distribuicaodequentinhas/DistribuicaoDeQuentinhas"
 import DistribuicaoDeCestasBasicas from "./pages/distribuicaodecestasbasicas/DistribuicaoDeCestasBasicas"
 import Contato from "./pages/contato/Contato"
+import Doacoes from "./pages/doacoes/Doacoes"
 
 function App() {
   
@@ -25,6 +26,7 @@ function App() {
         <Route path='/distribuicaodequentinhas' element={<DistribuicaoDeQuentinhas/>}/>
         <Route path='/distribuicaodecestasbasicas' element={<DistribuicaoDeCestasBasicas/>}/>
         <Route path='/contato' element={<Contato/>}/>
+        <Route path='/doacoes' element={<Doacoes/>}/>
       </Routes> 
       <Footer/>
     </BrowserRouter>

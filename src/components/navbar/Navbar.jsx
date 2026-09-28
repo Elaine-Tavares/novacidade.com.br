@@ -118,7 +118,7 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/doe"
+            to="/doacoes"
             onClick={fecharMenu}
             className={styles.doeButton}
           >
