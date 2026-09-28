@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ImagemPrincipal from '../../assets/hero.webp';
 import Banda from '../../assets/banda_de_musica_nova_cidade.webp'
 import styles from "./Home.module.css";
@@ -13,6 +13,8 @@ import {
   FaArrowRight,
   FaWhatsapp,
 } from "react-icons/fa";
+
+import { useEffect } from "react";
 
 const projetos = [
   {
@@ -44,7 +46,7 @@ const formasDeAjudar = [
     titulo: "Faça uma doação",
     descricao:
       "Sua contribuição ajuda a manter nossas ações e alcançar mais pessoas.",
-    link: "/doe",
+    link: "/doacoes",
     textoLink: "Quero doar",
   },
   {
@@ -66,6 +68,12 @@ const formasDeAjudar = [
 ];
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <main className={styles.home}>
       {/* HERO */}
@@ -110,7 +118,7 @@ function Home() {
               <span>(21) 98807 4852</span> <br/><br/>
               <a 
                 className={styles.whats}
-                href="https://wa.me/5521984772693?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+                href="https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
                 target="_blank"
                 rel="noopener noreferrer">
                 <FaWhatsapp className={styles.whats_img}/>(21) 98477 2396
@@ -344,9 +352,9 @@ function Home() {
             </Link>
             <a
               className={styles.whatsappButton}
-              href="https://wa.me/5521984772693?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."
-              target="_blank"
-              rel="noopener noreferrer" 
+              href="https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+                target="_blank"
+                rel="noopener noreferrer" 
             >
               <FaWhatsapp />
               Fale conosco

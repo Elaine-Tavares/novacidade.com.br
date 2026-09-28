@@ -58,16 +58,6 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/cursos"
-            onClick={fecharMenu}
-            className={({ isActive }) =>
-              isActive ? `${styles.link} ${styles.active}` : styles.link
-            }
-          >
-            Cursos
-          </NavLink>
-
-          <NavLink
             to="/distribuicaodequentinhas"
             onClick={fecharMenu}
             className={({ isActive }) =>
@@ -85,6 +75,26 @@ function Navbar() {
             }
           >
             Distribuição de Cestas Básicas
+          </NavLink>
+
+          <NavLink
+            to="/cursos"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Cursos
+          </NavLink>
+
+          <NavLink
+            to="/futebol"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Escolinha de Futebol
           </NavLink>
 
           <NavLink

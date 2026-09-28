@@ -1,7 +1,7 @@
-.cursos {
+.futebol {
   width: 100%;
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 70px;  
 }
 
 .container {
@@ -14,17 +14,12 @@
 ========================= */
 
 .hero {
-  padding: 60px 0;
-
+  padding: 70px 0;
   background: #f8f6f1;
-
   border-bottom: 3px solid var(--secondary_color);
 }
 
-.heroContainer {
-  width: min(1120px, 90%);
-  margin: 0 auto;
-
+.hero .container {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -50,7 +45,7 @@
 .heroContent h1 {
   margin: 20px 0;
 
-  font-size: 2.7rem;
+  font-size: 2.8rem;
   line-height: 1.05;
 }
 
@@ -61,20 +56,27 @@
 .heroContent p {
   max-width: 650px;
 
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
   line-height: 1.8;
+}
+
+.heroContent p strong {
+  font-weight: 800;
 }
 
 .heroButtons {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
+  margin-top: 30px;
 }
 
 .primaryButton,
 .secondaryButton,
-.whatsappButton {
+.whatsappButton,
+.lightButton {
   min-height: 50px;
 
   padding: 14px 22px;
@@ -131,26 +133,26 @@
 
   background: var(--secondary_color);
 
-  font-size: 5.5rem;
+  font-size: 6rem;
 
   box-shadow: 8px 8px 0 var(--primary_color);
 }
 
 
 /* =========================
-   INTRODUÇÃO
+   SOBRE
 ========================= */
 
-.introduction {
+.about {
   padding: 70px 0;
 
   border-bottom: 3px solid var(--secondary_color);
 }
 
 .sectionIntro {
-  max-width: 780px;
+  max-width: 750px;
 
-  margin: 0 auto;
+  margin: 0 auto 45px;
 
   text-align: center;
 }
@@ -174,80 +176,32 @@
   line-height: 1.8;
 }
 
-.sectionIntro strong {
-  font-weight: 800;
-}
-
-
-/* =========================
-   PROJETOS
-========================= */
-
-.projects {
-  padding: 70px 0;
-
-  background: #f8f6f1;
-
-  border-bottom: 3px solid var(--secondary_color);
-}
-
-.sectionHeader {
-  margin-bottom: 40px;
-}
-
-.sectionHeader h2 {
-  max-width: 750px;
-
-  margin-top: 15px;
-
-  font-size: 2rem;
-  line-height: 1.15;
-}
-
-.projectsGrid {
+.valuesGrid {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.projectCard {
-  position: relative;
-
+.valueCard {
   padding: 30px;
-
-  background: #fff;
 
   border: 1px solid #ddd;
   border-radius: 15px;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  text-align: center;
+
+  transition: transform 0.2s ease;
 }
 
-.projectCard:hover {
+.valueCard:hover {
   transform: translateY(-5px);
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.projectNumber {
-  position: absolute;
+.valueIcon {
+  width: 60px;
+  height: 60px;
 
-  top: 20px;
-  right: 20px;
-
-  font-size: 0.85rem;
-  font-weight: 800;
-
-  opacity: 0.4;
-}
-
-.projectIcon {
-  width: 55px;
-  height: 55px;
-
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 
   display: flex;
   align-items: center;
@@ -257,145 +211,149 @@
 
   background: var(--secondary_color);
 
+  font-size: 1.5rem;
+}
+
+.valueCard h3 {
+  margin-bottom: 10px;
+
   font-size: 1.3rem;
 }
 
-.projectCard h3 {
-  margin-bottom: 12px;
-
-  font-size: 1.3rem;
-}
-
-.projectCard p {
+.valueCard p {
   line-height: 1.7;
 }
 
 
 /* =========================
-   APOIO
+   CATEGORIAS
 ========================= */
 
-.support {
+.category {
   padding: 70px 0;
+
+  border-bottom: 3px solid var(--secondary_color);
+}
+
+.categoryFemale {
+  padding: 70px 0;
+
+  background: #f8f6f1;
 
   border-bottom: 3px solid var(--primary_color);
 }
 
-.supportContent {
-  max-width: 800px;
+.categoryHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin-bottom: 40px;
 }
 
-.supportContent h2 {
-  margin: 18px 0;
+.categoryHeader h2 {
+  margin: 15px 0 0;
 
   font-size: 2rem;
   line-height: 1.15;
 }
 
-.supportContent p {
-  margin-bottom: 18px;
+.categoryHeader h2 span {
+  display: block;
+}
+
+.categoryHeader > p {
+  max-width: 600px;
 
   line-height: 1.8;
 }
 
-.supportHighlight {
-  margin-top: 30px;
-  padding: 20px;
 
-  display: flex;
-  align-items: center;
-  gap: 15px;
+/* =========================
+   GALERIA
+========================= */
 
-  border-radius: 12px;
-
-  background: #f8f6f1;
-}
-
-.supportHighlight > svg {
-  flex-shrink: 0;
-
-  font-size: 2rem;
-}
-
-.supportHighlight div {
+.photoGrid {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
 }
 
-.supportHighlight strong {
-  font-size: 1rem;
+.photoCard {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #ddd;
+
+  aspect-ratio: 4 / 3;
 }
 
-.supportHighlight span {
-  line-height: 1.5;
+.photoCard img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.photoCard:hover img {
+  transform: scale(1.05);
 }
 
 
 /* =========================
-   COMO AJUDAR
+   FAIXA ETÁRIA
 ========================= */
 
-.help {
+.age {
   padding: 70px 0;
-
-  background: #f8f6f1;
 
   border-bottom: 3px solid var(--secondary_color);
 }
 
-.helpGrid {
+.ageCards {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.helpCard {
+.ageCard {
   padding: 30px;
 
-  background: #fff;
-
+  border: 1px solid #ddd;
   border-radius: 15px;
+
+  text-align: center;
 }
 
-.helpIcon {
-  width: 55px;
-  height: 55px;
+.ageCard > svg {
+  margin-bottom: 15px;
 
-  margin-bottom: 20px;
+  font-size: 2rem;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: var(--secondary_color);
+.ageCard h3 {
+  margin-bottom: 8px;
 
   font-size: 1.3rem;
 }
 
-.helpCard h3 {
+.ageCard strong {
+  display: block;
+
   margin-bottom: 12px;
 
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
-.helpCard p {
+.ageCard p {
   line-height: 1.7;
-}
-
-.cardLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  margin-top: 15px;
-
-  color: inherit;
-
-  font-weight: 700;
-  text-decoration: none;
 }
 
 
@@ -404,7 +362,7 @@
 ========================= */
 
 .cta {
-  padding: 70px 20px;
+  padding: 80px 20px;
 
   text-align: center;
 }
@@ -451,9 +409,19 @@
   animation: whatsappFloat 2.5s ease-in-out infinite;
 }
 
+.lightButton {
+  background: var(--secondary_color);
+
+  color: var(--terciary_color);
+}
+
+.lightButton:hover {
+  transform: translateY(-2px);
+}
+
 
 /* =========================
-   ANIMAÇÃO
+   ANIMAÇÃO WHATSAPP
 ========================= */
 
 @keyframes whatsappFloat {
@@ -476,33 +444,41 @@
 @media (min-width: 600px) {
 
   .hero {
-    padding: 70px 0;
+    padding: 80px 0;
   }
 
   .heroContent h1 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
 
   .heroButtons {
     flex-direction: row;
   }
 
-  .projectsGrid {
+  .valuesGrid {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .projectCard {
-    flex: 1 1 300px;
+  .valueCard {
+    flex: 1 1 280px;
   }
 
-  .helpGrid {
+  .photoGrid {
     flex-direction: row;
     flex-wrap: wrap;
   }
 
-  .helpCard {
-    flex: 1 1 300px;
+  .photoCard {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .ageCards {
+    flex-direction: row;
+  }
+
+  .ageCard {
+    flex: 1;
   }
 
   .ctaButtons {
@@ -519,11 +495,10 @@
 @media (min-width: 850px) {
 
   .hero {
-    min-height: 600px;
-    padding: 90px 0;
+    padding: 100px 0;
   }
 
-  .heroContainer {
+  .hero .container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -536,8 +511,6 @@
   }
 
   .heroContent h1 {
-    max-width: 650px;
-
     font-size: clamp(3rem, 5vw, 4.5rem);
   }
 
@@ -554,29 +527,46 @@
     font-size: 9rem;
   }
 
-  .introduction,
-  .projects,
-  .support,
-  .help {
+  .about,
+  .category,
+  .categoryFemale,
+  .age {
     padding: 100px 0;
   }
 
+  .sectionIntro {
+    margin-bottom: 60px;
+  }
+
   .sectionIntro h2,
-  .sectionHeader h2,
-  .supportContent h2 {
+  .categoryHeader h2 {
     font-size: clamp(2rem, 4vw, 3rem);
   }
 
-  .sectionHeader {
-    margin-bottom: 50px;
+  .categoryHeader {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 60px;
   }
 
-  .projectCard {
-    padding: 35px;
+  .categoryHeader > div {
+    flex: 1;
   }
 
-  .supportContent {
-    max-width: 850px;
+  .categoryHeader > p {
+    flex: 1;
+  }
+
+  .photoGrid {
+    gap: 20px;
+  }
+
+  .photoCard {
+    flex: 1 1 calc(25% - 20px);
+
+    aspect-ratio: 3 / 4;
   }
 
   .cta {
@@ -599,6 +589,10 @@
   .heroIcon {
     width: 330px;
     height: 330px;
+  }
+
+  .photoCard {
+    aspect-ratio: 4 / 5;
   }
 
 }

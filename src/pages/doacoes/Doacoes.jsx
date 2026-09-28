@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Doacoes.module.css";
 
 import {
@@ -7,6 +7,7 @@ import {
   FaCheck,
   FaHandHoldingHeart,
 } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const pix = [
   {
@@ -30,6 +31,12 @@ const pix = [
 ];
 
 function Doacoes() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const [copiado, setCopiado] = useState(null);
 
   async function copiarPix(chave, id) {
@@ -68,7 +75,7 @@ function Doacoes() {
           </h1>
 
           <p>
-            Cada contribuição ajuda o projeto Juntos Somos Mais
+            Cada contribuição ajuda o projeto Nova Cidade Juntos Somos Mais
             Fortes a continuar realizando ações e levando apoio
             para pessoas e famílias que precisam.
           </p>

@@ -434,19 +434,21 @@ function DistribuicaoDeQuentinhas() {
 
           <div className={styles.ctaButtons}>
 
-            <a
-              href="/seja-voluntario"
-              className={styles.primaryButton}
+            <a 
+              href="https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+                target="_blank"
+                rel="noopener noreferrer" 
+                className={styles.primaryButton}
             >
               Quero ser voluntário
               <FaArrowRight />
             </a>
 
             <a
-              href="/doe"
+              href="/doacoes"
               className={styles.secondaryButton}
             >
-              Quero ajudar
+              Quero Doar
             </a>
 
           </div>

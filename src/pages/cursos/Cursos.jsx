@@ -1,297 +1,459 @@
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
 import styles from "./Cursos.module.css";
 
 import {
-  FaFutbol,
-  FaFistRaised,
+  FaGraduationCap,
   FaHeart,
   FaUsers,
+  FaHandHoldingHeart,
   FaArrowRight,
+  FaWhatsapp,
+  FaTools,
 } from "react-icons/fa";
 
-import futebolMasculino1 from "../../assets/futebol_masculino12.webp";
-import futebolMasculino2 from "../../assets/futebol_masculino2.webp";
-
-import futebolFeminino1 from "../../assets/futebol_feminino2.jpeg";
-import futebolFeminino2 from "../../assets/futebol_feminino1.jpeg";
-
-import artesanato1 from "../../assets/artesanato1.jpeg";
-import artesanato2 from "../../assets/artesanato2.jpeg";
-
-/* ================================
-   FUTEBOL MASCULINO
-================================ */
-
-const cursosFutebolMasculino = [
+const cursos = [
   {
     id: 1,
-    imagem: futebolMasculino1,
-    titulo: "Futebol Masculino",
+    titulo: "Terceira Idade",
     descricao:
-      "Atividades esportivas voltadas para crianças e adolescentes, promovendo esporte, disciplina, convivência e desenvolvimento.",
+      "Projeto voltado à integração, convivência, atividades e valorização das pessoas da terceira idade.",
   },
   {
     id: 2,
-    imagem: futebolMasculino2,
-    titulo: "Treinos e atividades",
+    titulo: "Futebol Adulto",
     descricao:
-      "Momentos de aprendizado e prática esportiva que incentivam hábitos saudáveis e o trabalho em equipe.",
+      "Utilização do esporte como ferramenta de integração, disciplina, convivência e qualidade de vida.",
+  },
+  {
+    id: 3,
+    titulo: "Futebol Juniores",
+    descricao:
+      "Incentivo à prática esportiva, ao desenvolvimento, à disciplina e ao trabalho em equipe entre jovens.",
+  },
+  {
+    id: 4,
+    titulo: "Trança",
+    descricao:
+      "Curso voltado ao aprendizado de técnicas de tranças, possibilitando o desenvolvimento de novas habilidades.",
+  },
+  {
+    id: 5,
+    titulo: "Taekwondo",
+    descricao:
+      "Prática esportiva que contribui para disciplina, concentração, respeito e desenvolvimento pessoal.",
+  },
+  {
+    id: 6,
+    titulo: "Artesãs",
+    descricao:
+      "Incentivo ao artesanato como forma de aprendizado, expressão, geração de renda e fortalecimento da comunidade.",
+  },
+  {
+    id: 7,
+    titulo: "Cílios",
+    descricao:
+      "Capacitação em técnicas de extensão e cuidados com cílios, criando possibilidades de aprendizado e trabalho.",
+  },
+  {
+    id: 8,
+    titulo: "Banda Musical",
+    descricao:
+      "Projeto que busca promover o aprendizado musical, a cultura, a convivência e a expressão artística.",
+  },
+  {
+    id: 9,
+    titulo: "Manicure e Pedicure",
+    descricao:
+      "Curso voltado ao desenvolvimento de habilidades profissionais na área de beleza e cuidados pessoais.",
+  },
+  {
+    id: 10,
+    titulo: "Luta Muay Thai",
+    descricao:
+      "Atividade esportiva que trabalha disciplina, condicionamento físico, concentração e superação.",
+  },
+  {
+    id: 11,
+    titulo: "A Fome Não Espera",
+    descricao:
+      "Ação voltada ao apoio alimentar e ao atendimento de pessoas e famílias em situação de vulnerabilidade.",
+  },
+  {
+    id: 12,
+    titulo: "Educar",
+    descricao:
+      "Projeto voltado à educação, ao aprendizado e à criação de novas oportunidades para a comunidade.",
+  },
+  {
+    id: 13,
+    titulo: "Corte de Cabelo Masculino",
+    descricao:
+      "Curso que busca ensinar técnicas de corte masculino e possibilitar o desenvolvimento de uma nova habilidade profissional.",
+  },
+  {
+    id: 14,
+    titulo: "Corte de Cabelo Feminino",
+    descricao:
+      "Capacitação em técnicas de corte feminino, promovendo aprendizado e novas possibilidades profissionais.",
   },
 ];
 
-/* ================================
-   FUTEBOL FEMININO
-================================ */
-
-const cursosFutebolFeminino = [
+const formasDeApoiar = [
   {
-    id: 1,
-    imagem: futebolFeminino1,
-    titulo: "Futebol Feminino",
+    icone: <FaHeart />,
+    titulo: "Faça uma doação",
     descricao:
-      "Atividades esportivas que incentivam a participação feminina no futebol e promovem inclusão, confiança e integração.",
+      "Sua contribuição pode ajudar na compra de materiais, equipamentos e recursos necessários para colocar os projetos em prática.",
+    link: "/doacoes",
+    textoLink: "Quero doar",
   },
   {
-    id: 2,
-    imagem: futebolFeminino2,
-    titulo: "Esporte e inclusão",
+    icone: <FaUsers />,
+    titulo: "Seja um parceiro",
     descricao:
-      "Um espaço para desenvolver habilidades esportivas, fortalecer vínculos e incentivar a participação das meninas no esporte.",
-  },
-];
-
-/* ================================
-   ARTESÃ
-================================ */
-
-const cursosArtesa = [
-  {
-    id: 1,
-    imagem: artesanato1,
-    titulo: "Artesanato",
-    descricao:
-      "Atividades de artesanato que estimulam a criatividade, o aprendizado de novas habilidades e a convivência.",
+      "Empresas e profissionais podem contribuir oferecendo recursos, materiais, serviços ou conhecimento.",
+    link: "/contato",
+    textoLink: "Quero ser parceiro",
   },
   {
-    id: 2,
-    imagem: artesanato2,
-    titulo: "Oficinas de artesanato",
+    icone: <FaHandHoldingHeart />,
+    titulo: "Seja voluntário",
     descricao:
-      "Momentos de aprendizado e troca de conhecimentos através de diferentes técnicas artesanais.",
+      "Compartilhe seu conhecimento, suas habilidades e seu tempo para ajudar a transformar esses projetos em realidade.",
+    link: "/sejavoluntario",
+    textoLink: "Quero ajudar",
   },
 ];
 
 function Cursos() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
-    <main className={styles.page}>
-      {/* HERO */}
+    <main className={styles.cursos}>
+
+      {/* =========================
+          HERO
+      ========================= */}
+
       <section className={styles.hero}>
-        <div className={styles.container}>
+        <div className={styles.heroContainer}>
+
           <div className={styles.heroContent}>
-            <span className={styles.sectionTag}>
-              <FaUsers />
-              Cursos e oficinas
+
+            <span className={styles.heroTag}>
+              <FaGraduationCap />
+              Cursos e projetos
             </span>
 
             <h1>
-              Aprender, praticar e crescer juntos.
+              Conhecimento que
+              <span>transforma vidas.</span>
             </h1>
 
             <p>
-              Nossos cursos e atividades buscam criar oportunidades de
-              aprendizado, desenvolvimento e inclusão através do esporte
-              e do artesanato.
+              Acreditamos que o acesso ao conhecimento pode abrir
+              portas, desenvolver talentos e criar novas
+              oportunidades para a comunidade.
             </p>
+
+            <div className={styles.heroButtons}>
+
+              <a
+                href="https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.primaryButton}
+              >
+                <FaWhatsapp />
+                Quero apoiar
+              </a>
+
+              <Link
+                to="/doacoes"
+                className={styles.secondaryButton}
+              >
+                <FaHeart />
+                Faça uma doação
+              </Link>
+
+            </div>
+
           </div>
+
+          <div className={styles.heroIcon}>
+            <FaGraduationCap />
+          </div>
+
         </div>
       </section>
 
-      {/* INTRODUÇÃO */}
+
+      {/* =========================
+          INTRODUÇÃO
+      ========================= */}
+
       <section className={styles.introduction}>
+
         <div className={styles.container}>
+
           <div className={styles.sectionIntro}>
+
+            <span>Projetos prontos</span>
+
+            <h2>
+              Temos projetos. Precisamos de apoio para colocá-los
+              em ação.
+            </h2>
+
+            <p>
+              Buscamos proporcionar oportunidades de aprendizado,
+              desenvolvimento, inclusão e geração de novas
+              possibilidades para a comunidade.
+            </p>
+
+            <p>
+              Atualmente, contamos com diversos projetos já
+              estruturados, que estão com os{" "}
+              <strong>
+                projetos prontos para serem colocados em ação
+              </strong>
+              . Para isso, precisamos de apoio, parceiros e
+              recursos que possibilitem a sua realização.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =========================
+          CURSOS
+      ========================= */}
+
+      <section className={styles.projects}>
+
+        <div className={styles.container}>
+
+          <div className={styles.sectionHeader}>
+
+            <div>
+
+              <span className={styles.sectionTag}>
+                Nossas oportunidades
+              </span>
+
+              <h2>
+                Conheça os projetos que queremos colocar em prática.
+              </h2>
+
+            </div>
+
+          </div>
+
+
+          <div className={styles.projectsGrid}>
+
+            {cursos.map((curso) => (
+
+              <article
+                key={curso.id}
+                className={styles.projectCard}
+              >
+
+                <div className={styles.projectNumber}>
+                  {String(curso.id).padStart(2, "0")}
+                </div>
+
+                <div className={styles.projectIcon}>
+                  <FaGraduationCap />
+                </div>
+
+                <h3>{curso.titulo}</h3>
+
+                <p>{curso.descricao}</p>
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =========================
+          POR QUE PRECISAMOS DE APOIO
+      ========================= */}
+
+      <section className={styles.support}>
+
+        <div className={styles.container}>
+
+          <div className={styles.supportContent}>
+
             <span className={styles.sectionTag}>
-              Nossas atividades
+              Precisamos de você
             </span>
 
             <h2>
-              Oportunidades para aprender e participar
+              Um projeto pronto precisa de apoio para sair do papel.
             </h2>
 
             <p>
-              Acreditamos que o acesso ao esporte, à cultura e ao
-              aprendizado pode contribuir para o desenvolvimento pessoal
-              e fortalecer os vínculos dentro da comunidade.
+              Os projetos já foram pensados e estruturados, mas
+              precisamos de recursos, materiais, equipamentos,
+              profissionais e parceiros para que eles possam
+              realmente começar.
             </p>
+
+            <p>
+              Cada contribuição pode representar uma oportunidade
+              de aprendizado, uma nova habilidade ou até mesmo uma
+              possibilidade de geração de renda para alguém da
+              comunidade.
+            </p>
+
+            <div className={styles.supportHighlight}>
+
+              <FaTools />
+
+              <div>
+
+                <strong>
+                  Transforme um projeto em uma oportunidade.
+                </strong>
+
+                <span>
+                  Sua ajuda pode fazer parte dessa transformação.
+                </span>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* FUTEBOL MASCULINO */}
-      <section className={styles.courseSection}>
+
+      {/* =========================
+          FORMAS DE APOIAR
+      ========================= */}
+
+      <section className={styles.help}>
+
         <div className={styles.container}>
-          <div className={styles.courseHeader}>
-            <div className={styles.courseIcon}>
-              <FaFutbol />
-            </div>
 
-            <div>
-              <span className={styles.sectionTag}>
-                Esporte
-              </span>
+          <div className={styles.sectionIntro}>
 
-              <h2>Futebol Masculino</h2>
-
-              <p>
-                Atividades esportivas voltadas para o desenvolvimento
-                através do futebol.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.courseList}>
-            {cursosFutebolMasculino.map((curso) => (
-              <article
-                key={curso.id}
-                className={styles.courseCard}
-              >
-                <div className={styles.courseImage}>
-                  <img
-                    src={curso.imagem}
-                    alt={curso.titulo}
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className={styles.courseContent}>
-                  <h3>{curso.titulo}</h3>
-
-                  <p>{curso.descricao}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FUTEBOL FEMININO */}
-      <section className={styles.courseSectionAlt}>
-        <div className={styles.container}>
-          <div className={styles.courseHeader}>
-            <div className={styles.courseIcon}>
-              <FaFutbol />
-            </div>
-
-            <div>
-              <span className={styles.sectionTag}>
-                Esporte e inclusão
-              </span>
-
-              <h2>Futebol Feminino</h2>
-
-              <p>
-                Um espaço para incentivar a participação feminina no
-                esporte.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.courseList}>
-            {cursosFutebolFeminino.map((curso) => (
-              <article
-                key={curso.id}
-                className={styles.courseCard}
-              >
-                <div className={styles.courseImage}>
-                  <img
-                    src={curso.imagem}
-                    alt={curso.titulo}
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className={styles.courseContent}>
-                  <h3>{curso.titulo}</h3>
-
-                  <p>{curso.descricao}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ARTESANATO */}
-      <section className={styles.courseSection}>
-        <div className={styles.container}>
-          <div className={styles.courseHeader}>
-            <div className={styles.courseIcon}>
-              <FaFistRaised />
-            </div>
-
-            <div>
-              <span className={styles.sectionTag}>
-                Cultura e aprendizado
-              </span>
-
-              <h2>Artesanato</h2>
-
-              <p>
-                Oficinas para desenvolver a criatividade e aprender
-                novas técnicas artesanais.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.courseList}>
-            {cursosArtesa.map((curso) => (
-              <article
-                key={curso.id}
-                className={styles.courseCard}
-              >
-                <div className={styles.courseImage}>
-                  <img
-                    src={curso.imagem}
-                    alt={curso.titulo}
-                    loading="lazy"
-                  />
-                </div>
-
-                <div className={styles.courseContent}>
-                  <h3>{curso.titulo}</h3>
-
-                  <p>{curso.descricao}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className={styles.cta}>
-        <div className={styles.container}>
-          <div className={styles.ctaContent}>
-            <FaHeart className={styles.ctaIcon} />
+            <span>Faça parte</span>
 
             <h2>
-              Quer fazer parte das nossas atividades?
+              Existem muitas formas de ajudar.
             </h2>
 
             <p>
-              Entre em contato para saber mais sobre os cursos,
-              atividades e oportunidades de participação.
+              Você pode contribuir com recursos, conhecimento,
+              materiais, serviços ou seu próprio tempo.
             </p>
 
-            <a
-              href="/contato"
-              className={styles.ctaButton}
-            >
-              Entre em contato
-              <FaArrowRight />
-            </a>
           </div>
+
+
+          <div className={styles.helpGrid}>
+
+            {formasDeApoiar.map((forma) => (
+
+              <article
+                key={forma.titulo}
+                className={styles.helpCard}
+              >
+
+                <div className={styles.helpIcon}>
+                  {forma.icone}
+                </div>
+
+                <h3>{forma.titulo}</h3>
+
+                <p>{forma.descricao}</p>
+
+                <Link
+                  to={forma.link}
+                  className={styles.cardLink}
+                >
+                  {forma.textoLink}
+                  <FaArrowRight />
+                </Link>
+
+              </article>
+
+            ))}
+
+          </div>
+
         </div>
+
       </section>
+
+
+      {/* =========================
+          CTA FINAL
+      ========================= */}
+
+      <section className={styles.cta}>
+
+        <div className={styles.ctaContent}>
+
+          <FaGraduationCap />
+
+          <h2>
+            Juntos podemos transformar conhecimento em oportunidade.
+          </h2>
+
+          <p>
+            Apoie os projetos do Nova Cidade Juntos Somos Mais
+            Fortes e ajude a levar aprendizado, inclusão e novas
+            oportunidades para a comunidade.
+          </p>
+
+          <div className={styles.ctaButtons}>
+
+            <Link
+              to="/doacoes"
+              className={styles.secondaryButton}
+            >
+              <FaHeart />
+              Quero doar
+            </Link>
+
+            <a
+              href="https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+                target="_blank"
+                rel="noopener noreferrer"
+              className={styles.whatsappButton}
+            >
+              <FaWhatsapp />
+              Fale conosco
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
   );
 }

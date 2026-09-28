@@ -10,9 +10,18 @@ import {
   FaShoppingBasket,
   FaGraduationCap,
   FaArrowRight,
+  FaWhatsapp,
 } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function QuemSomos() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <main className={styles.page}>
       {/* HERO */}
@@ -209,15 +218,81 @@ function QuemSomos() {
 
                 <p>
                   Buscamos proporcionar oportunidades de aprendizado,
-                  desenvolvimento e inclusão.
+                  desenvolvimento, inclusão e geração de novas possibilidades
+                  para a comunidade.
                 </p>
 
-                <ul>
-                  <li><strong>Crochê</strong></li>
-                  <li><strong>Manicure e Pedicure</strong></li>
-                  <li><strong>Futebol Masculino</strong></li>
-                  <li><strong>Futebol Feminino</strong></li>
+                <p>
+                  Atualmente, contamos com diversos projetos já estruturados,
+                  que estão com os <strong>projetos prontos para serem colocados
+                  em ação</strong>. Para isso, precisamos de apoio, parceiros e
+                  recursos que possibilitem a sua realização.
+                </p>
+
+                <h3>Projetos prontos</h3>
+
+                <ul className={styles.coursesList}>
+                  <li>
+                    <strong>01 — Terceira Idade</strong>
+                  </li>
+
+                  <li>
+                    <strong>02 — Futebol Adulto</strong>
+                  </li>
+
+                  <li>
+                    <strong>03 — Futebol Juniores</strong>
+                  </li>
+
+                  <li>
+                    <strong>04 — Trança</strong>
+                  </li>
+
+                  <li>
+                    <strong>05 — Taekwondo</strong>
+                  </li>
+
+                  <li>
+                    <strong>06 — Artesãs</strong>
+                  </li>
+
+                  <li>
+                    <strong>07 — Cílios</strong>
+                  </li>
+
+                  <li>
+                    <strong>08 — Banda Musical</strong>
+                  </li>
+
+                  <li>
+                    <strong>09 — Manicure e Pedicure</strong>
+                  </li>
+
+                  <li>
+                    <strong>10 — Luta Muay Thai</strong>
+                  </li>
+
+                  <li>
+                    <strong>11 — A Fome Não Espera</strong>
+                  </li>
+
+                  <li>
+                    <strong>12 — Educar</strong>
+                  </li>
+
+                  <li>
+                    <strong>13 — Corte de Cabelo (Masculino)</strong>
+                  </li>
+
+                  <li>
+                    <strong>14 — Corte de Cabelo (Feminino)</strong>
+                  </li>
                 </ul>
+
+                <p>
+                  Com o apoio da comunidade, empresas e parceiros, esses projetos
+                  poderão sair do papel e beneficiar ainda mais pessoas.
+                </p>
               </div>
             </article>
 
@@ -255,12 +330,21 @@ function QuemSomos() {
             </p>
 
             <a
-              href="/seja-voluntario"
+               href="https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+                target="_blank"
+              rel="noopener noreferrer" 
               className={styles.ctaButton}
             >
-              Quero ajudar
-              <FaArrowRight />
+              <FaWhatsapp />
+              Quero ajudar   
             </a>
+
+            <Link 
+              className={styles.doar_btn} 
+              to={"/doacoes"}> 
+              <FaHeart />Quero Doar
+            </Link>
+
           </div>
         </div>
       </section>

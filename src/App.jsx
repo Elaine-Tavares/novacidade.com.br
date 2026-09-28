@@ -10,10 +10,10 @@ import DistribuicaoDeQuentinhas from "./pages/distribuicaodequentinhas/Distribui
 import DistribuicaoDeCestasBasicas from "./pages/distribuicaodecestasbasicas/DistribuicaoDeCestasBasicas"
 import Contato from "./pages/contato/Contato"
 import Doacoes from "./pages/doacoes/Doacoes"
+import Futebol from "./pages/futebol/Futebol"
+
 
 function App() {
-  
-
   return (
     <BrowserRouter>
       <Navbar/>
@@ -27,6 +27,7 @@ function App() {
         <Route path='/distribuicaodecestasbasicas' element={<DistribuicaoDeCestasBasicas/>}/>
         <Route path='/contato' element={<Contato/>}/>
         <Route path='/doacoes' element={<Doacoes/>}/>
+        <Route path='/futebol' element={<Futebol/>}/>
       </Routes> 
       <Footer/>
     </BrowserRouter>
