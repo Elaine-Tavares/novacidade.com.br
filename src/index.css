@@ -64,6 +64,10 @@ p {
   p {
     font-size: 18px;
   }
+
+  .portfolio_container img{
+    width: 70%;
+  }
 }
 
 /* ================================

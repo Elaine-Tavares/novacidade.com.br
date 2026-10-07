@@ -11,6 +11,7 @@ import DistribuicaoDeCestasBasicas from "./pages/distribuicaodecestasbasicas/Dis
 import Contato from "./pages/contato/Contato"
 import Doacoes from "./pages/doacoes/Doacoes"
 import Futebol from "./pages/futebol/Futebol"
+import Portfolio from "./pages/portfolio/Portfolio"
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/contato' element={<Contato/>}/>
         <Route path='/doacoes' element={<Doacoes/>}/>
         <Route path='/futebol' element={<Futebol/>}/>
+        <Route path='/portfolio' element={<Portfolio/>}/>
       </Routes> 
       <Footer/>
     </BrowserRouter>

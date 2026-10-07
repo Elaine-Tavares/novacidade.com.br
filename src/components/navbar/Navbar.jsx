@@ -118,6 +118,16 @@ function Navbar() {
           </NavLink>
 
           <NavLink
+            to="/portfolio"
+            onClick={fecharMenu}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            Portifólio
+          </NavLink>
+
+          <NavLink
             to="/contato"
             onClick={fecharMenu}
             className={({ isActive }) =>
