@@ -1,8 +1,10 @@
-import styles from "./Portfolio.module.css";
 
+import { useLocation } from "react-router-dom";
 import { FaFilePdf, FaDownload } from "react-icons/fa";
 
 import portfolioPdf from "../../assets/portfolio/portifolio.pdf";
+
+import styles from "./Portfolio.module.css";
 
 import Pg1 from '../../assets/portfolio/1.webp'
 import Pg2 from '../../assets/portfolio/2.webp'
@@ -20,6 +22,8 @@ import Pg13 from '../../assets/portfolio/13.webp'
 import Pg14 from '../../assets/portfolio/14.webp'
 import Pg15 from '../../assets/portfolio/15.webp'
 import Pg16 from '../../assets/portfolio/16.webp'
+import { useEffect } from "react";
+
 
 const paginas = [
   {
@@ -89,6 +93,13 @@ const paginas = [
 ]
 
 function Portfolio() {
+   const location = useLocation();
+  
+    // Rola a página para o topo sempre que o usuário navega para uma nova rota.
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location.pathname]);
+
   return (
     <main className={styles.portfolio}>
       {/* HERO */}
@@ -97,14 +108,12 @@ function Portfolio() {
           <FaFilePdf className={styles.heroIcon} />
 
           <h1>
-            Confira o nosso
+            Confira todos os projetos em nosso
             <span> Portifólio</span>
           </h1>
 
           <p>
-            Confira nosso portfólio completo e conheça os projetos,
-            ações e iniciativas desenvolvidos pela ONG Nova Cidade –
-            Juntos Somos Mais Fortes.
+            Portifólio completo com ações e iniciativas desenvolvidos pela ONG Nova Cidade – Juntos Somos Mais Fortes.
           </p>
 
           <a
@@ -113,7 +122,7 @@ function Portfolio() {
             className={styles.downloadButton}
           >
             <FaDownload />
-            Baixar portfólio
+            Baixar portifólio
           </a>
         </div>
       </section>

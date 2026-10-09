@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import ImagemPrincipal from '../../assets/hero.webp';
 import Banda from '../../assets/banda_de_musica_nova_cidade.webp'
+
 import styles from "./Home.module.css";
 
 import {
@@ -21,6 +22,7 @@ const projetos = [
     id: 1,
     icone: <FaUtensils />,
     titulo: "Distribuição de Quentinhas",
+    link: "/distribuicaodequentinhas",
     descricao:
       "Levamos refeições para pessoas e famílias que precisam de apoio.",
   },
@@ -28,6 +30,7 @@ const projetos = [
     id: 2,
     icone: <FaShoppingBasket />,
     titulo: "Cestas Básicas",
+    link: '/distribuicaodecestasbasicas',
     descricao:
       "Montamos e distribuímos cestas básicas para famílias da comunidade.",
   },
@@ -35,6 +38,7 @@ const projetos = [
     id: 3,
     icone: <FaGraduationCap />,
     titulo: "Cursos e Oficinas",
+    link: '/cursos',
     descricao:
       "Buscamos oferecer oportunidades de aprendizado, desenvolvimento e inclusão.",
   },
@@ -54,15 +58,17 @@ const formasDeAjudar = [
     titulo: "Seja voluntário",
     descricao:
       "Doe seu tempo, conhecimento e habilidades para fazer parte dessa transformação.",
-    link: "/seja-voluntario",
-    textoLink: "Quero ajudar",
+    link: false ,
+    a: "https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes.",
+    textoLink: "Quero ser voluntário",
   },
   {
     icone: <FaHandHoldingHeart />,
     titulo: "Seja um parceiro",
     descricao:
       "Empresas e instituições também podem contribuir para ampliar nosso impacto.",
-    link: "/contato",
+    link: false,
+    a: "https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes.",
     textoLink: "Quero ser parceiro",
   },
 ];
@@ -70,12 +76,13 @@ const formasDeAjudar = [
 function Home() {
   const location = useLocation();
 
+  // Rola a página para o topo sempre que o usuário navega para uma nova rota.
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   return (
-    <main className={styles.home}>
+    <main className={styles.home_page}>
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContainer}>
@@ -106,6 +113,7 @@ function Home() {
                 Doe   
               </Link> 
             </div>
+
           </div>
 
           <div className={styles.heroImage}>
@@ -211,7 +219,7 @@ function Home() {
               <h2>Conheça nossos projetos</h2>
             </div>
 
-            <Link to="/projetos" className={styles.textLink}>
+            <Link to="/portfolio" className={styles.textLink}>
               Ver todos
               <FaArrowRight />
             </Link>
@@ -232,7 +240,7 @@ function Home() {
                 <p>{projeto.descricao}</p>
 
                 <Link
-                  to="/projetos"
+                  to={projeto.link}
                   className={styles.cardLink}
                 >
                   Saiba mais
@@ -272,13 +280,21 @@ function Home() {
 
                 <p>{forma.descricao}</p>
 
-                <Link
-                  to={forma.link}
-                  className={styles.cardLink}
-                >
-                  {forma.textoLink}
-                  <FaArrowRight />
-                </Link>
+                {forma.link == false ? 
+                  <a className={styles.cardLink}
+                    href={forma.a}  
+                    target="_blank"
+                    rel="noopener noreferrer">{forma.textoLink}<FaArrowRight />
+                  </a>   
+                  :      
+                  <Link
+                    to={forma.link}
+                    className={styles.cardLink}
+                  >
+                    {forma.textoLink}
+                    <FaArrowRight />
+                  </Link>}
+                
               </article>
             ))}
           </div>
@@ -303,13 +319,13 @@ function Home() {
             </p>
           </div>
 
-          <Link
+          {/* <Link
             to="/sejavoluntario"
             className={styles.lightButton}
           >
             Quero ser voluntário
             <FaArrowRight />
-          </Link>
+          </Link> */}
         </div>
       </section>
 

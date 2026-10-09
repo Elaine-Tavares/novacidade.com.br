@@ -37,6 +37,7 @@ import slide13 from "../../assets/quentinhas/slide13.jpeg";
 import slide14 from "../../assets/quentinhas/slide14.jpeg";
 import slide15 from "../../assets/quentinhas/slide15.jpeg";
 import slide16 from "../../assets/quentinhas/slide16.jpeg";
+import { useLocation } from "react-router-dom";
 
 const fotosPrincipais = [
   {
@@ -150,6 +151,13 @@ const fotosCarrossel = [
 ];
 
 function DistribuicaoDeQuentinhas() {
+  const location = useLocation();
+  
+    // Rola a página para o topo sempre que o usuário navega para uma nova rota.
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location.pathname]);
+
   const [fotoAtual, setFotoAtual] = useState(0);
 
   // PASSAGEM AUTOMÁTICA DAS FOTOS

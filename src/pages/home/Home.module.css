@@ -1,8 +1,21 @@
-.home {
+.home_page {
   width: 100%;
   overflow: hidden;
   border-bottom: 3px solid var(--secondary_color);
   padding-top: 80px;
+  animation: fadeIn 4s ease ;  
+}
+
+@keyframes fadeIn {
+  /*No início 0%: o elemento está totalmente transparente*/
+  0% {
+    opacity: 0;
+  }
+  /*No
+   fim 100%: o elemento está totalmente visível*/
+  100% {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -17,14 +30,13 @@
 
 .hero {
   padding: 60px 0;
-  background: #f8f6f1;
+  background: var(--cor_clara_bg);
   border-bottom: 3px solid var(--secondary_color);
 }
 
 .heroContainer {
   width: min(1120px, 90%);
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -32,6 +44,7 @@
 
 .heroContent {
   width: 100%;
+  /* border: 2px solid blue; */
 }
 
 .heroTag,
@@ -39,7 +52,6 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -48,8 +60,6 @@
 
 .heroContent h1 {
   margin: 20px 0;
-
-  font-size: 2.5rem;
   line-height: 1.05;
 }
 
@@ -117,25 +127,9 @@
   border: 3px solid var(--primary_color);
 }
 
-
-/* .lightButton:hover,
-.whatsappButton:hover, */
-
-
-
-/* .heroImage {
-  width: 100%;
-}
-
-.heroImage img {
-  width: 100%;
-  display: block;
-  object-fit: contain;
-  border-radius: 20px;
-} */
-
 .heroImage {
   width: 100%;
+  /* border: 2px solid red; */
 }
 
 .heroImage img {
@@ -161,6 +155,8 @@
   text-align: center;
   font-size: 22px;
   margin-bottom: 5px;
+  color: var(--secondary_color);
+  text-shadow: 1px 1px 1px black;
 }
 
 .contatos_img span{
@@ -317,8 +313,6 @@
 
 .aboutContent h2 {
   margin: 18px 0;
-
-  font-size: 2rem;
   line-height: 1.15;
 }
 
@@ -399,8 +393,6 @@
 .projectCard h3,
 .helpCard h3 {
   margin-bottom: 12px;
-
-  font-size: 1.3rem;
 }
 
 .projectCard p,
@@ -414,7 +406,7 @@
 
 .help {
   padding: 70px 0;
-  background: #f8f6f1;
+  background: var(--cor_clara_bg);
   border-bottom: 3px solid var(--secondary_color);
 }
 

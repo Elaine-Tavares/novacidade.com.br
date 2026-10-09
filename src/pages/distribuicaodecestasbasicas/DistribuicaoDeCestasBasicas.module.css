@@ -1,7 +1,21 @@
 .page_distribuicao_de_cestas_basicas{
     padding-top: 110px;
+    animation: fadeIn 4s ease ;  
+}
+
+@keyframes fadeIn {
+  /*No início 0%: o elemento está totalmente transparente*/
+  0% {
+    opacity: 0;
+  }
+  /*No
+   fim 100%: o elemento está totalmente visível*/
+  100% {
+    opacity: 1;
+  }
 }
 
 .page_distribuicao_de_cestas_basicas h1{
     text-align: center;
 }
+

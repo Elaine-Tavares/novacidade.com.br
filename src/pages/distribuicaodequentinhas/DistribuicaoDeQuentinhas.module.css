@@ -5,8 +5,20 @@
 
 .quentinhas {
   width: 100%;
-  overflow: hidden;
-  
+  overflow: hidden; 
+  animation: fadeIn 4s ease ;  
+}
+
+@keyframes fadeIn {
+  /*No início 0%: o elemento está totalmente transparente*/
+  0% {
+    opacity: 0;
+  }
+  /*No
+   fim 100%: o elemento está totalmente visível*/
+  100% {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -57,7 +69,7 @@
 
 .heroContent h1 span {
   color: var(--secondary_color);
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 1px black;
 }
 
 .heroContent p {
