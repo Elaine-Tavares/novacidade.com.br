@@ -97,24 +97,14 @@ function Navbar() {
             Escolinha de Futebol
           </NavLink>
 
-          <NavLink
-            to="/sejavoluntario"
-            onClick={fecharMenu}
-            className={({ isActive }) =>
-              isActive ? `${styles.link} ${styles.active}` : styles.link
-            }
-          >
-            Seja Voluntário
-          </NavLink>
-
            <NavLink
-            to="/sejaparceiro"
+            to="/comoAjudar"
             onClick={fecharMenu}
             className={({ isActive }) =>
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
-            Seja Parceiro
+            Como Ajudar
           </NavLink>
 
           <NavLink
@@ -134,7 +124,7 @@ function Navbar() {
               isActive ? `${styles.link} ${styles.active}` : styles.link
             }
           >
-            Contato
+            Contatos
           </NavLink>
 
           <NavLink

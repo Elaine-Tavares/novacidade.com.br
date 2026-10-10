@@ -122,7 +122,7 @@ const formasDeApoiar = [
     titulo: "Seja voluntário",
     descricao:
       "Compartilhe seu conhecimento, suas habilidades e seu tempo para ajudar a transformar esses projetos em realidade.",
-    link: "/sejavoluntario",
+    link: "/comoajudar",
     textoLink: "Quero ajudar",
   },
 ];

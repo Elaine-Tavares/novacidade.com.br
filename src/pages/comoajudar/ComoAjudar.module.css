@@ -1,5 +1,5 @@
 
-.contatos {
+.comoAjudar {
   width: 100%;
   overflow: hidden;
   padding-top: 80px;
@@ -45,7 +45,6 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -54,7 +53,6 @@
 .heroTag svg,
 .sectionTag svg {
   color: var(--secondary_color);
-  flex-shrink: 0;
 }
 
 .hero h1 {
@@ -82,8 +80,8 @@
   min-height: 50px;
   padding: 14px 22px;
 
-  color: #fff;
   background: #25d366;
+  color: #fff;
   border: 2px solid transparent;
   border-radius: 8px;
 
@@ -101,10 +99,10 @@
 }
 
 /* =========================
-   CONTATOS
+   FORMAS DE AJUDAR
 ========================= */
 
-.contactSection {
+.formas {
   padding: 70px 0;
   border-bottom: 3px solid var(--secondary_color);
 }
@@ -129,23 +127,21 @@
   line-height: 1.8;
 }
 
-/* CARTÕES DE CONTATO */
+/* CARDS */
 
-.contactCards {
+.cards {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.contactCard {
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1 1 0;
+  align-items: flex-start;
 
   padding: 30px;
 
-  text-align: center;
   background: var(--cor_clara_bg);
   border: 1px solid #ddd;
   border-radius: 15px;
@@ -155,13 +151,12 @@
     box-shadow 0.2s ease;
 }
 
-.contactCard:hover {
+.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.contactIcon,
-.addressIcon {
+.cardIcon {
   width: 60px;
   height: 60px;
   margin-bottom: 20px;
@@ -175,32 +170,34 @@
   border-radius: 50%;
 }
 
-.contactIcon svg,
-.addressIcon svg {
+.cardIcon svg {
   width: 26px;
   height: 26px;
 }
 
-.contactCard h3 {
+.card h3 {
   margin: 0 0 12px;
 }
 
-.contactCard p {
+.card p {
   flex-grow: 1;
   margin: 0;
   line-height: 1.8;
 }
 
-.contactInfo {
-  display: block;
-  margin-top: 20px;
-  overflow-wrap: anywhere;
+/* BOTÕES DOS CARDS */
+
+.cardButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 100%;
+  margin-top: 25px;
 }
 
-/* BOTÕES */
-
-.contactButton,
-.mapButton {
+.cardButton,
+.cardButtonSecondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -208,14 +205,9 @@
 
   width: 100%;
   min-height: 48px;
-  margin-top: 25px;
   padding: 12px 16px;
 
-  color: var(--terciary_color);
-  background: var(--secondary_color);
-  border: 2px solid transparent;
   border-radius: 8px;
-
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -226,76 +218,60 @@
     transform 0.2s ease;
 }
 
-.contactButton:hover,
-.mapButton:hover {
-  border-color: var(--primary_color);
+.doeButton {
+  margin-top: 10px;
+
+  padding: 13px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  background-color: var(--secondary_color);
+  color: var(--terciary_color);
+
+  text-decoration: none;
+  font-weight: 700;
+
+  opacity: 0.9;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.2s ease;
+}
+
+.doeButton:hover {
+  opacity: 1;
+}
+
+/* WHATSAPP */
+
+.cardButton {
+  color: #fff;
+  background: #25d366;
+  border: 2px solid transparent;
+}
+
+.cardButton:hover {
+  background: #1eaf54;
   transform: translateY(-2px);
 }
 
-/* =========================
-   LOCALIZAÇÃO
-========================= */
+/* PÁGINA DE DOAÇÕES */
 
-.location {
-  padding: 70px 0;
-  background: var(--cor_clara_bg);
-  border-bottom: 3px solid var(--secondary_color);
+.cardButtonSecondary {
+  color: var(--terciary_color);
+  background: transparent;
+  border: 2px solid var(--secondary_color);
 }
 
-.locationContent {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-/* ENDEREÇO */
-
-.addressCard {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  padding: 30px;
-
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-}
-
-.addressIcon {
-  margin-bottom: 20px;
-}
-
-.addressCard h3 {
-  margin: 0 0 15px;
-}
-
-.addressCard p {
-  margin: 0;
-  line-height: 1.9;
-}
-
-.mapButton {
-  width: 100%;
-}
-
-/* MAPA DO GOOGLE */
-
-.mapContainer {
-  width: 100%;
-  min-height: 320px;
-  overflow: hidden;
-
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  background: #eee;
-}
-
-.mapContainer iframe {
-  display: block;
-  width: 100%;
-  height: 320px;
-  border: 0;
+.cardButtonSecondary:hover {
+  background: var(--secondary_color);
+  transform: translateY(-2px);
 }
 
 /* =========================
@@ -304,6 +280,7 @@
 
 .cta {
   padding: 70px 20px;
+  background: var(--cor_clara_bg);
   text-align: center;
 }
 
@@ -332,7 +309,6 @@
   justify-content: center;
   gap: 10px;
 
-  width: 100%;
   min-height: 50px;
   padding: 14px 24px;
 
@@ -359,8 +335,8 @@
 ========================= */
 
 .heroButton:focus-visible,
-.contactButton:focus-visible,
-.mapButton:focus-visible,
+.cardButton:focus-visible,
+.cardButtonSecondary:focus-visible,
 .whatsappButton:focus-visible {
   outline: 3px solid var(--primary_color);
   outline-offset: 4px;
@@ -379,41 +355,18 @@
     width: fit-content;
   }
 
-  .contactSection,
-  .location {
-    padding: 80px 0;
-  }
-
-  .contactCards {
+  .cards {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
   }
 
-  .contactCard {
+  .card {
     flex: 1 1 260px;
   }
 
-  .contactButton {
-    width: 100%;
-  }
-
-  .locationContent {
-    gap: 30px;
-  }
-
-  .addressCard {
-    padding: 35px;
-  }
-
-  .mapContainer,
-  .mapContainer iframe {
-    min-height: 380px;
-    height: 380px;
-  }
-
-  .whatsappButton {
-    width: fit-content;
+  .formas {
+    padding: 80px 0;
   }
 }
 
@@ -426,8 +379,11 @@
     padding: 100px 0;
   }
 
-  .contactSection,
-  .location {
+  .hero .container {
+    gap: 25px;
+  }
+
+  .formas {
     padding: 100px 0;
   }
 
@@ -435,34 +391,14 @@
     margin-bottom: 55px;
   }
 
-  .contactCards {
+  .cards {
     flex-wrap: nowrap;
     gap: 25px;
   }
 
-  .contactCard {
-    padding: 30px 24px;
-  }
-
-  .locationContent {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 30px;
-  }
-
-  .addressCard {
-    flex: 0 0 35%;
-  }
-
-  .mapContainer {
-    flex: 1;
-    min-width: 0;
-    min-height: 420px;
-  }
-
-  .mapContainer iframe {
-    height: 100%;
-    min-height: 420px;
+  .card {
+    flex: 1 1 0;
+    padding: 35px;
   }
 
   .cta {
@@ -475,12 +411,12 @@
 ========================= */
 
 @media (min-width: 1200px) {
-  .contactCards {
+  .hero .container {
     gap: 30px;
   }
 
-  .addressCard {
-    flex-basis: 32%;
+  .cards {
+    gap: 30px;
   }
 }
 
@@ -489,14 +425,14 @@
 ========================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .contatos {
+  .comoAjudar {
     animation: none;
   }
 
-  .contactCard,
+  .card,
   .heroButton,
-  .contactButton,
-  .mapButton,
+  .cardButton,
+  .cardButtonSecondary,
   .whatsappButton {
     transition: none;
   }

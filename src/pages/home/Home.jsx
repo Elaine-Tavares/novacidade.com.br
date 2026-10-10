@@ -319,13 +319,15 @@ function Home() {
             </p>
           </div>
 
-          {/* <Link
-            to="/sejavoluntario"
+          <a 
             className={styles.lightButton}
+            href="https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes."  
+            target="_blank"
+            rel="noopener noreferrer" 
           >
             Quero ser voluntário
             <FaArrowRight />
-          </Link> */}
+          </a>
         </div>
       </section>
 
