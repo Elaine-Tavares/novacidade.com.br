@@ -82,13 +82,13 @@ function Home() {
   }, [location.pathname]);
 
   return (
-    <main className={styles.home_page}>
+    <main className={styles.home_page} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
       {/* HERO */}
-      <section className={styles.hero}>
-        <div className={styles.heroContainer}>
+      <section className={styles.hero} >
+        <div className={styles.heroContainer} >
           <div className={styles.heroContent}>
             <span className={styles.heroTag}>
-              <FaHeart />
+              <FaHeart/>
               Juntos podemos transformar vidas
             </span>
 
@@ -137,7 +137,7 @@ function Home() {
       </section>
 
       {/* IMPACTO */}
-      <section className={styles.impact}>
+      <section className={styles.impact} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.sectionIntro}>
             <span>Nosso impacto</span>
@@ -172,8 +172,9 @@ function Home() {
       </section>
 
       {/* QUEM SOMOS */}
-      <section className={styles.about}>
+      <section className={styles.about} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
+          <span className={styles.sectionTag}>Quem somos</span>
           <div className={styles.aboutImage}>
             <img
               src={Banda}
@@ -182,8 +183,6 @@ function Home() {
           </div>
 
           <div className={styles.aboutContent}>
-            <span className={styles.sectionTag}>Quem somos</span>
-
             <h2>
               Um projeto feito por pessoas que acreditam no poder da
               solidariedade.
@@ -201,16 +200,12 @@ function Home() {
               Foi então que nasceu o nome do projeto: <strong>Nova Cidade Juntos Somos Mais Fortes</strong>.
             </p>
 
-            {/* <Link to="/quem-somos" className={styles.textLink}>
-              Conheça nossa história
-              <FaArrowRight />
-            </Link> */}
           </div>
         </div>
       </section>
 
       {/* PROJETOS */}
-      <section className={styles.projects}>
+      <section className={styles.projects} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <div>
@@ -253,7 +248,7 @@ function Home() {
       </section>
 
       {/* COMO AJUDAR */}
-      <section className={styles.help}>
+      <section className={styles.help} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.sectionIntro}>
             <span>Faça parte</span>
@@ -302,7 +297,7 @@ function Home() {
       </section>
 
       {/* VOLUNTARIADO CTA */}
-      <section className={styles.volunteer}>
+      <section className={styles.volunteer} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.volunteerContainer}>
           <div>
             <span className={styles.sectionTag}>
@@ -332,7 +327,7 @@ function Home() {
       </section>
 
       {/* PARCEIROS */}
-      <section className={styles.partners}>
+      <section className={styles.partners} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.sectionIntro}>
             <span>Nossos parceiros</span>
@@ -352,8 +347,9 @@ function Home() {
       </section>
 
       {/* CTA DOAÇÃO */}
-      <section className={styles.donation}>
+      <section className={styles.donation} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.donationContent}>
+
           <FaHeart />
 
           <h2>Quer fazer parte dessa transformação?</h2>

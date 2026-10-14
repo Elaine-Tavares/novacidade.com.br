@@ -1,20 +1,16 @@
-
-
-
 /* =========================
    REDES SOCIAIS
 ========================= */
 
 footer .social {
-  padding: 60px 0;
+  padding: 10px 0 10px 0;
   text-align: center;
   background-color: var(--primary_color);
+
 }
 
 .social h2 {
   margin-bottom: 10px;
-
-  font-size: 2rem;
 }
 
 .social p {
@@ -34,9 +30,7 @@ footer .social {
 @media (min-width: 850px) {
     /* REDES SOCIAIS */
 
-  footer .social {
-    padding: 80px 0;
-  }
+  
 }
 
 
