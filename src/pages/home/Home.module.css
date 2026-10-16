@@ -67,11 +67,12 @@
 .primaryButton, 
 .secondaryButton { 
   min-height: 50px; 
+  width: 340px;
   padding: 14px 22px; 
   display: inline-flex; 
   align-items: center; 
   justify-content: center; 
-  width: 340px;
+  
   margin: 0 auto;
   gap: 9px; 
   border-radius: 8px; 
@@ -350,6 +351,9 @@
   color: inherit; 
   font-weight: 700; 
   text-decoration: none;  
+  border: 2px solid var(--primary_color);
+  padding: 5px 10px;
+  border-radius: 8px;
 } 
 
 
@@ -372,6 +376,17 @@
   border-radius: 15px; 
   box-shadow: 5px 5px 30px gray;
 }  
+
+.profissionaisList {
+  margin: 12px 0 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.profissionaisList li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
 
 /* ========================= VOLUNTARIADO ========================= */ 
 .volunteer { 
@@ -663,7 +678,6 @@
 
   .hero{
     position: relative;
-    border: 2px solid red;
   }
 
   .heroContainer{

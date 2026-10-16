@@ -23,7 +23,7 @@ function QuemSomos() {
   }, [location.pathname]);
 
   return (
-    <main className={styles.page}>
+    <main className={styles.page} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -54,7 +54,7 @@ function QuemSomos() {
       </section>
 
       {/* NOSSA HISTÓRIA */}
-      <section className={styles.history}>
+      <section className={styles.history} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.historyImage}>
             <img
@@ -91,7 +91,7 @@ function QuemSomos() {
       </section>
 
       {/* NOSSO PROPÓSITO */}
-      <section className={styles.mission}>
+      <section className={styles.mission} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.sectionIntro}>
             <span className={styles.sectionTag}>
@@ -153,7 +153,7 @@ function QuemSomos() {
       </section>
 
       {/* O QUE FAZEMOS */}
-      <section className={styles.actions}>
+      <section className={styles.actions} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <div>
@@ -233,59 +233,59 @@ function QuemSomos() {
 
                 <ul className={styles.coursesList}>
                   <li>
-                    <strong>01 — Terceira Idade</strong>
+                    Terceira Idade
                   </li>
 
                   <li>
-                    <strong>02 — Futebol Adulto</strong>
+                    Futebol Adulto
                   </li>
 
                   <li>
-                    <strong>03 — Futebol Juniores</strong>
+                    Futebol Juniores
                   </li>
 
                   <li>
-                    <strong>04 — Trança</strong>
+                    Trança
                   </li>
 
                   <li>
-                    <strong>05 — Taekwondo</strong>
+                    Taekwondo
                   </li>
 
                   <li>
-                    <strong>06 — Artesãs</strong>
+                    Artesãs
                   </li>
 
                   <li>
-                    <strong>07 — Cílios</strong>
+                    Cílios
                   </li>
 
                   <li>
-                    <strong>08 — Banda Musical</strong>
+                    Banda Musical
                   </li>
 
                   <li>
-                    <strong>09 — Manicure e Pedicure</strong>
+                    Manicure e Pedicure
                   </li>
 
                   <li>
-                    <strong>10 — Luta Muay Thai</strong>
+                    Luta Muay Thai
                   </li>
 
                   <li>
-                    <strong>11 — A Fome Não Espera</strong>
+                    A Fome Não Espera
                   </li>
 
                   <li>
-                    <strong>12 — Educar</strong>
+                    Educar
                   </li>
 
                   <li>
-                    <strong>13 — Corte de Cabelo (Masculino)</strong>
+                    Corte de Cabelo (Masculino)
                   </li>
 
                   <li>
-                    <strong>14 — Corte de Cabelo (Feminino)</strong>
+                    Corte de Cabelo (Feminino)
                   </li>
                 </ul>
 
@@ -306,7 +306,15 @@ function QuemSomos() {
 
                 <p>
                   Reunimos pessoas dispostas a doar seu tempo,
-                  conhecimento e habilidades.
+                  conhecimento e habilidades. Se você atua em uma das áreas abaixo, venha fazer parte do nosso projeto:
+                  <ul className={styles.profissionaisList}>
+                    <li>Advogado</li>
+                    <li>Assistente Social</li>
+                    <li>Nutricionista</li>
+                    <li>Pedagoga</li>
+                    <li>Psicóloga</li>
+                    <li>Contador</li>
+                  </ul>
                 </p>
               </div>
             </article>
@@ -315,7 +323,7 @@ function QuemSomos() {
       </section>
 
       {/* CTA */}
-      <section className={styles.cta}>
+      <section className={styles.cta} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.ctaContent}>
             <FaHeart className={styles.ctaIcon} />

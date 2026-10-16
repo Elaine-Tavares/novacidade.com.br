@@ -14,28 +14,8 @@ import styles from "./ComoAjudar.module.css";
 const numeroWhatsApp = "5521984772396";
 
 const formasDeAjudar = [
-  {
+   {
     id: 1,
-    icone: <FaUsers />,
-    titulo: "Seja voluntário",
-    descricao:
-      "Doe seu tempo, suas habilidades e seu carinho para ajudar pessoas e famílias que precisam de apoio.",
-    textoBotao: "Quero ser voluntário",
-    mensagem:
-      "Olá, vim do site e gostaria de saber como posso ser voluntário no projeto social Nova Cidade Juntos Somos Mais Fortes.",
-  },
-  {
-    id: 2,
-    icone: <FaHandshake />,
-    titulo: "Seja parceiro",
-    descricao:
-      "Sua empresa ou instituição pode se unir a nós para fortalecer nossas ações e ampliar o alcance do projeto.",
-    textoBotao: "Quero ser parceiro",
-    mensagem:
-      "Olá, vim do site e gostaria de conversar sobre uma parceria com o projeto social Nova Cidade Juntos Somos Mais Fortes.",
-  },
-  {
-    id: 3,
     icone: <FaHeart />,
     titulo: "Faça uma doação",
     descricao:
@@ -46,6 +26,35 @@ const formasDeAjudar = [
     segundoBotao: "Ir para página de doações",
     linkDoacoes: "/doacoes",
   },
+  {
+    id: 2,
+    icone: <FaUsers />,
+    titulo: "Seja voluntário",
+    descricao:
+    "Estamos em busca de profissionais que queiram doar seus conhecimentos e contribuir para transformar vidas. Se você atua em uma das áreas abaixo, venha fazer parte do nosso projeto:",
+    profissionais: [
+      "Advogado",
+      "Assistente Social",
+      "Nutricionista",
+      "Pedagoga",
+      "Psicóloga",
+      "Contador",
+    ],
+    textoBotao: "Quero ser voluntário",
+    mensagem:
+      "Olá, vim do site e gostaria de saber como posso ser voluntário no projeto social Nova Cidade Juntos Somos Mais Fortes.",
+  },
+  {
+    id: 3,
+    icone: <FaHandshake />,
+    titulo: "Seja parceiro",
+    descricao:
+      "Sua empresa ou instituição pode se unir a nós para fortalecer nossas ações e ampliar o alcance do projeto.",
+    textoBotao: "Quero ser parceiro",
+    mensagem:
+      "Olá, vim do site e gostaria de conversar sobre uma parceria com o projeto social Nova Cidade Juntos Somos Mais Fortes.",
+  },
+ 
 ];
 
 function ComoAjudar() {
@@ -120,6 +129,14 @@ function ComoAjudar() {
                 <h3>{forma.titulo}</h3>
 
                 <p>{forma.descricao}</p>
+
+                {forma.profissionais && (
+                  <ul className={styles.profissionaisList}>
+                    {forma.profissionais.map((profissional) => (
+                      <li key={profissional}>{profissional}</li>
+                    ))}
+                  </ul>
+                )}
 
                 <div className={styles.cardButtons}>
                   {/* BOTÃO DO WHATSAPP */}

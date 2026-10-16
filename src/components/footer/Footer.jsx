@@ -12,8 +12,13 @@ export default function Footer() {
         {/* REDES SOCIAIS */}
       <section className={styles.social}>
         <div className={styles.container}>
-          <h2>Acompanhe nosso trabalho</h2>
-
+          <div className={styles.cnpj_container}>
+            <h2>Nova Cidade Juntos Somos Mais Fortes</h2>
+            <p>CNPJ: 53.268.572-0001/12</p>
+          </div>
+          
+          <h4>Acompanhe nosso trabalho</h4>
+        
           <p>
             Siga nossas redes sociais e acompanhe de perto nossas ações.
           </p>

@@ -57,7 +57,15 @@ const formasDeAjudar = [
     icone: <FaUsers />,
     titulo: "Seja voluntário",
     descricao:
-      "Doe seu tempo, conhecimento e habilidades para fazer parte dessa transformação.",
+    "Estamos em busca de profissionais que queiram doar seus conhecimentos e contribuir para transformar vidas. Se você atua em uma das áreas abaixo, venha fazer parte do nosso projeto:",
+    profissionais: [
+      "Advogado",
+      "Assistente Social",
+      "Nutricionista",
+      "Pedagoga",
+      "Psicóloga",
+      "Contador",
+    ],
     link: false ,
     a: "https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes.",
     textoLink: "Quero ser voluntário",
@@ -274,6 +282,14 @@ function Home() {
                 <h3>{forma.titulo}</h3>
 
                 <p>{forma.descricao}</p>
+
+                {forma.profissionais && (
+                  <ul className={styles.profissionaisList}>
+                    {forma.profissionais.map((profissional) => (
+                      <li key={profissional}>{profissional}</li>
+                    ))}
+                  </ul>
+                )}
 
                 {forma.link == false ? 
                   <a className={styles.cardLink}
