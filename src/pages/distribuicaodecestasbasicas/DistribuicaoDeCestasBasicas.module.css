@@ -31,7 +31,8 @@
 
 .hero {
   padding: 60px 0;
-  background: #f8f6f1;
+  background: var(--cor_clara_bg);
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .hero .container {
@@ -80,15 +81,16 @@
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 5px 5px 30px gray;
 
-  box-shadow: 8px 8px 0 var(--secondary_color);
+  /* box-shadow: 8px 8px 0 var(--secondary_color); */
 }
 
 .heroImage img {
   display: block;
 
   width: 100%;
-  height: 280px;
+  height: 250px;
 
   object-fit: cover;
 }
@@ -100,7 +102,7 @@
 
 .intro {
   padding: 70px 0;
-  background-color: rgb(231, 230, 230);
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .intro .container {
@@ -145,7 +147,8 @@
 
 .mainPhotos {
   padding: 70px 0;
-  background-color: #ffffff;
+  background-color: var(--cor_clara_bg);
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .sectionIntro {
@@ -218,6 +221,7 @@
 .howItWorks {
   padding: 70px 0;
   background-color: var(--primary_color);
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .howItWorks .container {
@@ -293,7 +297,7 @@
 
 .gallery {
   padding: 70px 0;
-  background-color: rgb(231, 230, 230);
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .slider {
@@ -410,6 +414,7 @@
 .cta {
   padding: 70px 20px;
   background-color: var(--secondary_color);
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .ctaContent {
@@ -464,9 +469,8 @@
   text-decoration: none;
   font-weight: 700;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: all .3s ease
+  
 }
 
 .primaryButton {
@@ -482,8 +486,9 @@
 .primaryButton:hover,
 .secondaryButton:hover {
   transform: translateY(-3px);
+  opacity: 1; 
+  box-shadow: 0 8px 20px var(--verde_whats);
 
-  box-shadow: 5px 5px 0 var(--terciary_color);
 }
 
 .primaryButton:focus-visible,

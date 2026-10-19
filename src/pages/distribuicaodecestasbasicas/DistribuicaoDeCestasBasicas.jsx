@@ -126,7 +126,7 @@ function DistribuicaoDeCestasBasicas() {
     <main className={styles.cestasBasicas}>
 
       {/* HERO */}
-      <section className={styles.hero}>
+      <section className={styles.hero} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.heroContent}>
@@ -158,7 +158,7 @@ function DistribuicaoDeCestasBasicas() {
       </section>
 
       {/* INTRODUÇÃO */}
-      <section className={styles.intro}>
+      <section className={styles.intro} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.sectionTag}>
@@ -186,7 +186,7 @@ function DistribuicaoDeCestasBasicas() {
       </section>
 
       {/* FOTOS PRINCIPAIS */}
-      <section className={styles.mainPhotos}>
+      <section className={styles.mainPhotos} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.sectionIntro}>
@@ -216,7 +216,7 @@ function DistribuicaoDeCestasBasicas() {
       </section>
 
       {/* COMO ACONTECE */}
-      <section className={styles.howItWorks}>
+      <section className={styles.howItWorks} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.howContent}>
@@ -293,7 +293,7 @@ function DistribuicaoDeCestasBasicas() {
       </section>
 
       {/* CARROSSEL */}
-      <section className={styles.gallery}>
+      <section className={styles.gallery} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.sectionIntro}>
@@ -366,7 +366,7 @@ function DistribuicaoDeCestasBasicas() {
       </section>
 
       {/* CTA */}
-      <section className={styles.cta}>
+      <section className={styles.cta} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.ctaContent}>
 
           <FaHeart />

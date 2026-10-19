@@ -202,7 +202,6 @@
 } 
 
 .sectionIntro span { 
-  font-size: 0.85rem; 
   font-weight: 700; 
   letter-spacing: 0.05em; 
   text-transform: uppercase; 
@@ -241,7 +240,7 @@
 /* ========================= QUEM SOMOS ========================= */ 
 .about { padding: 70px 0; 
   background: var(--cor_clara_bg);
-  border-bottom: 3px solid var(--primary_color); 
+  border-bottom: 3px solid var(--primary_color) !important; 
 } 
 
 /* .about .container { 
@@ -270,6 +269,7 @@
   display: block; 
   object-fit: cover; 
   border-radius: 18px; 
+  margin-top: 15px;
 } 
 
 .aboutContent h2 { 
@@ -354,7 +354,12 @@
   border: 2px solid var(--primary_color);
   padding: 5px 10px;
   border-radius: 8px;
+  transition: all .3s ease;
 } 
+
+.cardLink:hover, .textLink:hover{
+   box-shadow: 0 8px 20px var(--primary_color);
+}
 
 
 /* ========================= COMO AJUDAR ========================= */ 
@@ -583,6 +588,10 @@
   flex: 1; 
 } 
 
+.heroImage{
+  width: 90%;
+}
+
 .heroContent h1 { 
   max-width: 620px; 
 } 
@@ -683,7 +692,12 @@
   .heroContainer{
     flex-direction: row;
     align-items: start;
-    gap: 5px;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .heroButtons{
+    width: 600px;
   }
 
  .contatos_img{

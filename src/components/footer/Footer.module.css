@@ -39,6 +39,18 @@ footer .social {
   font-weight: bold;
 }
 
+.insta{
+  color: rgb(218, 17, 51);
+  background-color: pink;
+  border-radius: 8px;
+}
+
+.face{
+  color: blue;
+  background-color: var(--branco);
+  border-radius: 8px;
+}
+
 @media (min-width: 850px) {
     /* REDES SOCIAIS */
 

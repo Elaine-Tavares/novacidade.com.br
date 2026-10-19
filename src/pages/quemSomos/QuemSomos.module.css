@@ -33,7 +33,7 @@
 .hero {
   padding: 60px 0;
   background: #f8f6f1;
-  border-bottom: 3px solid var(--secondary_color);
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .hero .container {
@@ -64,7 +64,6 @@
   margin: 0 0 18px;
   color: var(--terciary_color);
   line-height: 1.15;
-   font-size: 2.5rem;
 }
 
 .hero p {
@@ -121,13 +120,13 @@
 
 .historyContent h2 {
   margin: 0 0 20px;
-  color: var(--primary_color);
   line-height: 1.25;
 }
 
 .historyContent p {
   margin: 0 0 15px;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .historyContent strong {
@@ -141,7 +140,7 @@
 
 .mission {
   padding: 65px 0;
-  border-bottom: 3px solid var(--secondary_color);
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .sectionIntro {
@@ -159,7 +158,6 @@
 
 .sectionIntro h2 {
   margin: 0 0 15px;
-  color: var(--primary_color);
   line-height: 1.3;
 }
 
@@ -180,7 +178,7 @@
   flex-direction: column;
   align-items: center;
   padding: 30px 22px;
-  background-color: #fff;
+  background-color: var(--branco);
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -201,6 +199,7 @@
 .valueCard h3 {
   margin: 0 0 10px;
   color: var(--primary_color);
+  text-shadow: 1px 1px 2px black; 
 }
 
 .valueCard p {
@@ -223,7 +222,6 @@
 
 .sectionHeader h2 {
   margin: 0;
-  color: var(--primary_color);
   line-height: 1.3;
 }
 
@@ -258,11 +256,11 @@
 .actionCard h3 {
   margin: 0 0 8px;
   color: var(--primary_color);
+  text-shadow: 1px 1px 2px black; 
 }
 
 .actionCard p {
   margin: 0;
-  color: #666;
   line-height: 1.6;
 }
 
@@ -276,7 +274,8 @@
   margin-bottom: 6px;
   line-height: 1.6;
   font-weight: bold;
-  color: #666;
+  /* color: #666; */
+  opacity: .7;
 }
 
 /* ================================
@@ -286,7 +285,7 @@
 .cta {
   padding: 65px 0;
   text-align: center;
-  border-bottom: 3px solid var(--secondary_color);
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .ctaContent {
@@ -315,26 +314,56 @@
   opacity: 0.9;
 }
 
-.ctaButton {
+.whats { 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  width: fit-content; 
+  padding: 10px 16px; 
+  background-color: var(--verde_whats);
+  color: var(--terciary_color); 
+  border-radius: 8px; 
+  text-decoration: none; 
+  font-weight: 700; 
+  box-shadow: 0 8px 20px transparent; 
+  animation: whatsappFloat 2.5s ease-in-out infinite; 
+  min-height: 50px; 
+  width: 340px;
+  padding: 14px 22px; 
+  text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 24px;
-  background-color: #25d366;
-  color: var(--terciary_color);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-}
+  transition: all .3s ease, 
+  /* box-shadow 0.2s ease;  */
+} 
 
-.ctaButton:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
+.whats_img { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 25px; 
+} 
+
+/* Ao passar o mouse */ 
+.whats:hover { 
+  animation-play-state: paused; 
+  transform: translateY(-3px); 
+  box-shadow: 0 8px 20px var(--verde_whats)
+} 
+  
+
+/* Animação lenta para cima e para baixo */ 
+@keyframes whatsappFloat { 
+  100% { 
+    transform: translateY(0); 
+  } 
+  50% { 
+    transform: translateY(-6px); 
+  } 
+  0% {
+    transform: translateY(0); 
+  }
+} 
 
 .doar_btn {
   background-color: var(--secondary_color);
@@ -355,15 +384,22 @@
   text-decoration: none;
   margin-top: 10px;
 
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
+  min-height: 50px; 
+  width: 340px;
+  padding: 14px 22px; 
+
+  transition: all .3s ease;
+   
 }
 
 .doar_btn:hover{
-  opacity: 1;
-  border: 3px solid var(--primary_color);
+  opacity: 1; 
+  box-shadow: 0 8px 20px var(--verde_whats)
 }
+
+
+ 
+
 
 /* ================================
    TABLET

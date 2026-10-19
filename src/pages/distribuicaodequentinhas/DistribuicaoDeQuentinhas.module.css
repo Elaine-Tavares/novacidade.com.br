@@ -34,7 +34,8 @@
 
 .hero {
   padding: 60px 0;
-   background: #f8f6f1;
+  background: var(--cor_clara_bg); 
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .hero .container {
@@ -83,8 +84,7 @@
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
-
-  box-shadow: 8px 8px 0 var(--secondary_color);
+  box-shadow: 5px 5px 30px gray;
 }
 
 .heroImage img {
@@ -103,7 +103,7 @@
 
 .intro {
   padding: 70px 0;
-  background-color: rgb(231, 230, 230);
+  border-bottom: 3px solid var(--secondary_color);
 }
 
 .intro .container {
@@ -148,7 +148,8 @@
 
 .mainPhotos {
   padding: 70px 0;
-  background-color: #ffffff;
+  background-color: var(--cor_clara_bg);
+  border-bottom: 3px solid var(--primary_color);
 }
 
 .sectionIntro {
@@ -222,6 +223,7 @@
   padding: 70px 0;
 
   background-color: var(--primary_color);
+  border-bottom: 3px solid var(--secondary_color); 
 }
 
 .howItWorks .container {
@@ -297,8 +299,7 @@
 
 .gallery {
   padding: 70px 0;
-
-  background-color: rgb(231, 230, 230);
+  border-bottom: 3px solid var(--primary_color); 
 }
 
 .slider {
@@ -469,9 +470,8 @@
   text-decoration: none;
   font-weight: 700;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: all .3s ease
+    
 }
 
 .primaryButton {
@@ -487,8 +487,8 @@
 .primaryButton:hover,
 .secondaryButton:hover {
   transform: translateY(-3px);
-
-  box-shadow: 5px 5px 0 var(--terciary_color);
+  opacity: 1; 
+  box-shadow: 0 8px 20px var(--verde_whats);
 }
 
 

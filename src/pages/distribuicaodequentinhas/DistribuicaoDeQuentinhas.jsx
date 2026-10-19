@@ -189,7 +189,7 @@ function DistribuicaoDeQuentinhas() {
     <main className={styles.quentinhas}>
 
       {/* HERO */}
-      <section className={styles.hero}>
+      <section className={styles.hero} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.heroContent}>
@@ -223,7 +223,7 @@ function DistribuicaoDeQuentinhas() {
       </section>
 
       {/* INTRODUÇÃO */}
-      <section className={styles.intro}>
+      <section className={styles.intro} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.sectionTag}>
@@ -251,7 +251,7 @@ function DistribuicaoDeQuentinhas() {
       </section>
 
       {/* 3 FOTOS PRINCIPAIS */}
-      <section className={styles.mainPhotos}>
+      <section className={styles.mainPhotos} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.sectionIntro}>
@@ -282,7 +282,7 @@ function DistribuicaoDeQuentinhas() {
       </section>
 
       {/* COMO ACONTECE */}
-      <section className={styles.howItWorks}>
+      <section className={styles.howItWorks} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.howContent}>
@@ -358,7 +358,7 @@ function DistribuicaoDeQuentinhas() {
       </section>
 
       {/* CARROSSEL */}
-      <section className={styles.gallery}>
+      <section className={styles.gallery} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
 
           <div className={styles.sectionIntro}>
@@ -426,7 +426,7 @@ function DistribuicaoDeQuentinhas() {
       </section>
 
       {/* CTA */}
-      <section className={styles.cta}>
+      <section className={styles.cta} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
         <div className={styles.ctaContent}>
 
           <FaHeart />

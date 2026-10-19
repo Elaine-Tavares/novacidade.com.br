@@ -156,22 +156,22 @@ function Home() {
           </div>
 
           <div className={styles.impactGrid}>
-            <div className={styles.impactCard}>
+            <div className={styles.impactCard} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
               <strong>+2.000</strong>
               <span>Quentinhas distribuídas desde 2021</span>
             </div>
 
-            <div className={styles.impactCard}>
+            <div className={styles.impactCard} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
               <strong>+2.000</strong>
               <span>Famílias beneficiadas</span>
             </div>
 
-            <div className={styles.impactCard}>
+            <div className={styles.impactCard} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
               <strong>8</strong>
               <span>Voluntários</span>
             </div>
 
-            <div className={styles.impactCard}>
+            <div className={styles.impactCard} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">
               <strong>1</strong>
               <span>Parceiro(s)</span>
             </div>
@@ -259,7 +259,7 @@ function Home() {
       <section className={styles.help} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
           <div className={styles.sectionIntro}>
-            <span>Faça parte</span>
+            <span >Faça parte</span>
 
             <h2>Existem muitas formas de ajudar.</h2>
 

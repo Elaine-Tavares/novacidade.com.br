@@ -33,6 +33,7 @@ const pix = [
 function Doacoes() {
   const location = useLocation();
 
+  // Rola a página para o topo sempre que o usuário navega para uma nova rota.
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
