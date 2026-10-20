@@ -30,16 +30,7 @@ const formasDeAjudar = [
     id: 2,
     icone: <FaUsers />,
     titulo: "Seja voluntário",
-    descricao:
-    "Estamos em busca de profissionais que queiram doar seus conhecimentos e contribuir para transformar vidas. Se você atua em uma das áreas abaixo, venha fazer parte do nosso projeto:",
-    profissionais: [
-      "Advogado",
-      "Assistente Social",
-      "Nutricionista",
-      "Pedagoga",
-      "Psicóloga",
-      "Contador",
-    ],
+    descricao:"Estamos em busca de pessoas que queiram doar seus conhecimentos e contribuir para transformar vidas. Venha fazer parte do nosso projeto!",
     textoBotao: "Quero ser voluntário",
     mensagem:
       "Olá, vim do site e gostaria de saber como posso ser voluntário no projeto social Nova Cidade Juntos Somos Mais Fortes.",
@@ -129,14 +120,6 @@ function ComoAjudar() {
                 <h3>{forma.titulo}</h3>
 
                 <p>{forma.descricao}</p>
-
-                {forma.profissionais && (
-                  <ul className={styles.profissionaisList}>
-                    {forma.profissionais.map((profissional) => (
-                      <li key={profissional}>{profissional}</li>
-                    ))}
-                  </ul>
-                )}
 
                 <div className={styles.cardButtons}>
                   {/* BOTÃO DO WHATSAPP */}

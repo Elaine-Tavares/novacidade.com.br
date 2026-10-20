@@ -13,6 +13,12 @@ import {
   FaGraduationCap,
   FaArrowRight,
   FaWhatsapp,
+  FaBalanceScale,
+  FaHandsHelping,
+  FaAppleAlt,
+  FaBookReader,
+  FaBrain,
+  FaCalculator
 } from "react-icons/fa";
 
 import { useEffect } from "react";
@@ -57,18 +63,10 @@ const formasDeAjudar = [
     icone: <FaUsers />,
     titulo: "Seja voluntário",
     descricao:
-    "Estamos em busca de profissionais que queiram doar seus conhecimentos e contribuir para transformar vidas. Se você atua em uma das áreas abaixo, venha fazer parte do nosso projeto:",
-    profissionais: [
-      "Advogado",
-      "Assistente Social",
-      "Nutricionista",
-      "Pedagoga",
-      "Psicóloga",
-      "Contador",
-    ],
+    "Estamos em busca de pessoas que queiram doar seus conhecimentos e contribuir para transformar vidas. Venha fazer parte do nosso projeto",
     link: false ,
     a: "https://wa.me/5521984772396?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20projeto%20social%20Nova%20Cidade%20Juntos%20Somos%20Mais%20Fortes.",
-    textoLink: "Quero ser voluntário",
+    textoLink: "Quero ser voluntário"
   },
   {
     icone: <FaHandHoldingHeart />,
@@ -283,14 +281,6 @@ function Home() {
 
                 <p>{forma.descricao}</p>
 
-                {forma.profissionais && (
-                  <ul className={styles.profissionaisList}>
-                    {forma.profissionais.map((profissional) => (
-                      <li key={profissional}>{profissional}</li>
-                    ))}
-                  </ul>
-                )}
-
                 {forma.link == false ? 
                   <a className={styles.cardLink}
                     href={forma.a}  
@@ -342,6 +332,58 @@ function Home() {
         </div>
       </section>
 
+      {/* VOLUNTÁRIOS */}
+    <section className={styles.volunteers}>
+      <div className={styles.container}>
+        <div className={styles.volunteersIntro}>
+          <span>
+            <FaHeart />
+            Nossa equipe
+          </span>
+
+          <h2>Profissionais que fazem a diferença</h2>
+
+          <p>
+            Contamos com profissionais voluntários que compartilham
+            seus conhecimentos e habilidades para fortalecer nossas
+            ações e contribuir com a comunidade.
+          </p>
+        </div>
+
+        <div className={styles.volunteersList}>
+          <article className={styles.volunteerCard}>
+            <FaBalanceScale />
+            <h3>Advogado</h3>
+          </article>
+
+          <article className={styles.volunteerCard}>
+            <FaHandsHelping />
+            <h3>Assistente Social</h3>
+          </article>
+
+          <article className={styles.volunteerCard}>
+            <FaAppleAlt />
+            <h3>Nutricionista</h3>
+          </article>
+
+          <article className={styles.volunteerCard}>
+            <FaBookReader />
+            <h3>Pedagoga</h3>
+          </article>
+
+          <article className={styles.volunteerCard}>
+            <FaBrain />
+            <h3>Psicóloga</h3>
+          </article>
+
+          <article className={styles.volunteerCard}>
+            <FaCalculator />
+            <h3>Contador</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
       {/* PARCEIROS */}
       <section className={styles.partners} data-aos="fade-right" data-aos-delay="0" data-aos-once="false">
         <div className={styles.container}>
@@ -361,6 +403,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      
 
       {/* CTA DOAÇÃO */}
       <section className={styles.donation} data-aos="fade-up" data-aos-delay="0" data-aos-once="false">

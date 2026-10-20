@@ -307,15 +307,7 @@ function QuemSomos() {
 
                 <p>
                   Reunimos pessoas dispostas a doar seu tempo,
-                  conhecimento e habilidades. Se você atua em uma das áreas abaixo, venha fazer parte do nosso projeto:
-                  <ul className={styles.profissionaisList}>
-                    <li>Advogado</li>
-                    <li>Assistente Social</li>
-                    <li>Nutricionista</li>
-                    <li>Pedagoga</li>
-                    <li>Psicóloga</li>
-                    <li>Contador</li>
-                  </ul>
+                  conhecimento e habilidades para contribuir em transformar vidas. Venha fazer parte do nosso projeto! 
                 </p>
               </div>
             </article>

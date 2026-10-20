@@ -461,6 +461,123 @@
   box-shadow: 0 8px 20px var(--verde_whats)
 } 
 
+
+
+/* ========================= VOLUNTÁRIOS ========================= */ 
+
+.volunteers {
+  padding: 60px 0;
+}
+
+.volunteersIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.volunteersIntro > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.volunteersIntro h2 {
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.volunteersIntro p {
+  max-width: 750px;
+  line-height: 1.7;
+}
+
+.volunteersList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.volunteerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  min-height: 150px;
+  padding: 25px 20px;
+
+  background-color: var(--branco);
+  border-radius: 12px;
+
+  box-shadow: 5px 5px 30px gray;
+
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.volunteerCard:hover {
+  transform: translateY(-5px);
+}
+
+.volunteerCard > svg {
+  font-size: 30px;
+  color: var(--terciary_color);
+}
+
+.volunteerCard h3 {
+  margin: 0;
+}
+
+/* 600px */
+
+@media (min-width: 600px) {
+  .volunteers {
+    padding: 75px 0;
+  }
+
+  .volunteersList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .volunteerCard {
+    flex: 1 1 240px;
+    max-width: 350px;
+  }
+}
+
+/* 850px */
+
+@media (min-width: 850px) {
+  .volunteers {
+    padding: 90px 0;
+  }
+
+  .volunteersList {
+    gap: 25px;
+  }
+
+  .volunteerCard {
+    flex: 1 1 280px;
+  }
+}
+
+/* 1200px */
+
+@media (min-width: 1200px) {
+  .volunteersIntro h2 {
+    font-size: 2.2rem;
+  }
+}
+
  
 /* ========================= PARCEIROS ========================= */ 
 .partners { 
