@@ -58,8 +58,8 @@ Pré-requisitos
 - npm, que acompanha a instalação do Node.js.
 - Git, caso queira clonar o repositório.
 
-URL_DO_REPOSITORIO: https://github.com/Elaine-Tavares/novacidade.com.br.git
-DEPLOY: https://novacidadecombr.vercel.app/
+- URL_DO_REPOSITORIO: https://github.com/Elaine-Tavares/novacidade.com.br.git
+- DEPLOY: https://novacidadecombr.vercel.app/
 
 
 📍 Informações institucionais
